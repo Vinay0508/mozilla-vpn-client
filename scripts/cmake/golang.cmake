@@ -5,9 +5,9 @@
 ## Find the absolute path to the go build tool.
 find_program(GOLANG_BUILD_TOOL NAMES go REQUIRED)
 
-# Capture this during configuration and re-use that 
+# Capture this during configuration and re-use that
 # during build, as we might not have the same env variables.
-# for example when building in XCode. 
+# for example when building in XCode.
 set(GOLANG_GOROOT $ENV{GOROOT} CACHE STRING "Path to GOROOT variable")
 
 ## Build a library file from a golang project.
