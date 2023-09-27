@@ -74,12 +74,12 @@ StackView {
                     menu.title =  titleText;
                 }
 
-                objectName: "buttonSelectEntry"
                 titleText: MZI18n.MultiHopFeatureMultiHopEntryLocationHeader
                 descriptionText: titleText
                 contentChildren: [
                     ServerLabel {
                         id: entryLabel
+                        objectName: "buttonSelectEntry"
 
                         serversList: [
                             // Multi-hop TODO : What to do when there is no entry server.
@@ -107,7 +107,6 @@ StackView {
                         menu.title = titleText;
                     }
 
-                    objectName: "buttonSelectExit"
                     btnObjectName: "buttonSelectExit-btn"
                     titleText: MZI18n.MultiHopFeatureMultiHopExitLocationHeader
                     descriptionText: titleText
@@ -115,6 +114,8 @@ StackView {
 
                         ServerLabel {
                             id: exitLabel
+                            objectName: "buttonSelectExit"
+
                             serversList: [
 
                                 {
