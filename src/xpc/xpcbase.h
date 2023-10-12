@@ -1,4 +1,5 @@
-
+#ifndef XPCBASE_H
+#define XPCBASE_H
 
 #include <CoreFoundation/CoreFoundation.h>
 #include <xpc/xpc.h>
@@ -77,3 +78,5 @@ class XPCBase {
     return "Unknown Error";
   }
 };
+
+#endif //XPCBASE_H

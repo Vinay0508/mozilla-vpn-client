@@ -10,7 +10,7 @@
 #include <QCoreApplication>
 #include <QObject>
 #include <QScopedPointer>
-#include <QtLogging>
+// #include <QtLogging>
 #include <chrono>
 #include <iostream>
 #include <thread>
@@ -27,8 +27,9 @@ void XPCClient::send(const QString aMessage) {
     sendInternal(aMessage);
     return;
   }
+
   // Dispatch onto our thread if not there.
-  QMetaObject::invokeMethod(this, "send", Qt::QueuedConnection, aMessage);
+  QMetaObject::invokeMethod(this, "send", Qt::QueuedConnection, Q_ARG(QString, aMessage));
 };
 
 void XPCClient::handleServerEvent(xpc_object_t event) {
@@ -69,9 +70,8 @@ void XPCClient::connectService(QString service) {
     return;
   }
   qWarning("[XPCClient] - not in thread dispatch");
-  // Dispatch onto our thread if not there.
-  QMetaObject::invokeMethod(this, "connectService", Qt::QueuedConnection,
-                            service);
+  // Dispatch onto our thread if not there.                 
+   QMetaObject::invokeMethod(this, "connectService", Qt::QueuedConnection, Q_ARG(QString, service));                         
 }
 
 // private

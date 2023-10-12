@@ -12,7 +12,7 @@
 #include <QObject>
 #include <QScopeGuard>
 #include <QThread>
-#include <QtLogging>
+// #include <QtLogging>
 #include <iostream>
 
 #include "xpcbase.h"

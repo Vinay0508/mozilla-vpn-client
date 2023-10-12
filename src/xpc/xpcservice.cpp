@@ -9,7 +9,7 @@
 
 #include <QDebug>
 #include <QObject>
-#include <QtLogging>
+// #include <QtLogging>
 
 #include "leakdetector.h"
 
