@@ -43,7 +43,7 @@ MZInAppAuthenticationBase {
     _inputs: MZInAppAuthenticationInputs {
         objectName: "authVerificationSessionByEmailNeeded"
         _telemetryScreenId: authSignUp._telemetryScreenId
-        _buttonTelemetryId: "verify"
+        _telemetryButtonId: "verify"
         _buttonEnabled: MZAuthInApp.state === MZAuthInApp.StateVerificationSessionByEmailNeeded && activeInput().text && activeInput().text.length === MZAuthInApp.sessionEmailCodeLength && !activeInput().hasError
         _buttonOnClicked: (inputText) => { MZAuthInApp.verifySessionEmailCode(inputText) }
         _buttonText: MZI18n.InAppAuthVerifySecurityCodeButton

@@ -106,8 +106,6 @@ Item {
                     screen: telemetryScreenId,
                     action: "impression",
                 });
-
-                previousTelemetryScreenId = telemetryScreenId
             }
 
             Component.onCompleted: {

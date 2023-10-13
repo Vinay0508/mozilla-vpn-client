@@ -46,7 +46,7 @@ MZInAppAuthenticationBase {
         objectName: "authVerificationSessionByTotpNeeded"
 
         _telemetryScreenId: authVerificationSessionByTotpNeeded._telemetryScreenId
-        _buttonTelemetryId: "verify"
+        _telemetryButtonId: "verify"
         _buttonEnabled: MZAuthInApp.state === MZAuthInApp.StateVerificationSessionByTotpNeeded && activeInput().text.length === MZAuthInApp.totpCodeLength && !activeInput().hasError
         _buttonOnClicked: (inputText) => { MZAuthInApp.verifySessionTotpCode(inputText) }
         _buttonText: MZI18n.InAppAuthVerifySecurityCodeButton

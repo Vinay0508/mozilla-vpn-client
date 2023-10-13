@@ -44,7 +44,7 @@ MZInAppAuthenticationBase {
     _inputs: MZInAppAuthenticationInputs {
         objectName: "authUnblockCodeNeeded"
         _telemetryScreenId: authUnblockCodeNeeded._telemetryScreenId
-        _buttonTelemetryId: "verify"
+        _telemetryButtonId: "verify"
         _buttonEnabled: MZAuthInApp.state === MZAuthInApp.StateUnblockCodeNeeded && activeInput().text.length === MZAuthInApp.unblockCodeLength && !activeInput().hasError
         _buttonOnClicked: (inputText) => { MZAuthInApp.verifyUnblockCode(inputText) }
         _buttonText: MZI18n.InAppAuthVerifySecurityCodeButton
