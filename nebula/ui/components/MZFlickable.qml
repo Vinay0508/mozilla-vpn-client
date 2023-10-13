@@ -144,9 +144,12 @@ Flickable {
                 && flickContentHeight + absoluteYPosition >= contentSpace) {
             vpnFlickable.contentHeight = flickContentHeight + (flickContentHeight >= height ? MZTheme.theme.navBarHeightWithMargins : (absoluteYPosition + flickContentHeight) - contentSpace + (height - flickContentHeight))
         }
-        //If the navbar isn't visible, or the flickable's content does not interfere with the navbar area, don't worry about adding any padding
-        else {
+        // If the navbar isn't visible, or the flickable's content does not interfere with the navbar area, don't worry about adding any padding
+        else if (flickContentHeight) {
             vpnFlickable.contentHeight = flickContentHeight
+        }
+        else {
+            console.warn("No height set for flickable element.");
         }
     }
 
